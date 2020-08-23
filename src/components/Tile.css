@@ -1,0 +1,17 @@
+.tile {
+    border-style: ridge;
+    border-color: black;
+    background-color: darkgrey;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.zeroTile {
+    background-color: dimgray;
+    border-style: none;
+    cursor: default;
+}
