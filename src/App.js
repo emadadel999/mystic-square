@@ -8,11 +8,9 @@ import {
   Switch,
   Route,
   Redirect,
-  useHistory,
 } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import './App.css';
-import { Alert } from "reactstrap";
 
 function App() {
   return (
