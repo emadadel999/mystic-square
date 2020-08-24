@@ -4,7 +4,7 @@ import Welcome from "./pages/Welcome";
 import Game from "./pages/Game";
 import Result from "./pages/Result";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -18,7 +18,7 @@ function App() {
       <Helmet 
         bodyAttributes={{style: 'background-color : black; min-height: 100%;'}} 
         htmlAttributes={{style: 'height: 100%;'}} />
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/welcome" />} />
           <Route exact path="/welcome">
