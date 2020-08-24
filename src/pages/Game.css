@@ -2,23 +2,96 @@
   border-style: solid;
   background-color: dimgray;
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 0.1vw;
   justify-content: space-evenly;
   align-content: space-evenly;
 }
 
-.game.threebythree {
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px;
-  width: 400px;
-  height: 400px;
+@media (min-width: 992px) {
+  .game.threebythree {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 19vw;
+    height: 37vh;
+  }
+  .game.fourbyfour {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 700px;
+    height: 700px;
+  }
+  .gameBtn {
+    width: 234px;
+    margin: 40px 116px 0 116px;
+    padding: 14px;
+    border-radius: 15px;
+  }
 }
 
-.game.fourbyfour {
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px 100px;
-  width: 500px;
-  height: 500px;
+@media (max-width: 991px) {
+  /* start of large tablet styles */
+  .game.threebythree {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 600px;
+    height: 600px;
+  }
+  .game.fourbyfour {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 600px;
+    height: 600px;
+  }
+  .gameBtn {
+    width: 200px;
+    margin: 35px 100px 0 100px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* start of medium tablet styles */
+  .game.threebythree {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 450px;
+    height: 450px;
+  }
+  .game.fourbyfour {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 450px;
+    height: 450px;
+  }
+  .gameBtn {
+    width: 150px;
+    margin: 30px 75px 0 75px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 479px) {
+  /* start of phone styles */
+  .game.threebythree {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 300px;
+    height: 300px;
+  }
+  .game.fourbyfour {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 300px;
+    height: 300px;
+  }
+  .gameBtn {
+    width: 120px;
+    margin: 20px 30px 0 30px;
+    padding: 10px;
+    border-radius: 5px;
+  }
 }
 
 .gameBtns-container {
@@ -30,13 +103,9 @@
 .gameBtn {
   color: darkgray;
   font-size: x-large;
-  width: 150px;
-  margin: 50px;
-  padding: 20px;
   background-color: black;
   border-style: solid;
   border-color: darkgray;
-  border-radius: 15px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   text-align: center;

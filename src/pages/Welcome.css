@@ -4,22 +4,20 @@
   justify-content: center;
   align-items: center;
   border-style: solid;
-  border-radius: 15px;
+  border-radius: 1vw;
   border-color: darkgray;
   height: 70%;
   width: 70%;
   background-color: black;
 }
 
-
-.welcome-container > h1 {
-    color: hotpink;
-    font-family: 'Courier New', Courier, monospace;
+.welcome-text {
+  color: hotpink;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.welcome-container > h2 {
-    margin-top: 20px;
-
+.welcome-subtext {
+  margin-top: 1vw;
 }
 
 .choice-container {
@@ -28,26 +26,106 @@
   justify-content: space-between;
 }
 
-.choice {
+.choiceBtn {
   color: darkgray;
-  font-size: xx-large;
-  margin: 50px;
-  padding: 50px;
   background-color: black;
   border-style: solid;
   border-color: darkgray;
-  border-radius: 15px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.choice:link {
+@media (min-width: 992px) {
+  .welcome-container {
+    height: 90%;
+    width: 90%;
+    border-radius: 2vw;
+  }
+  .welcome-text {
+    font-size: 50px;
+  }
+  .welcome-subtext {
+    font-size: 40px;
+  }
+  .choiceBtn {
+    font-size: 35px;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* start of large tablet styles */
+  .welcome-container {
+    height: 90%;
+    width: 90%;
+    border-radius: 2vw;
+  }
+  .welcome-text {
+    font-size: 40px;
+  }
+  .welcome-subtext {
+    font-size: 35px;
+  }
+  .choiceBtn {
+    font-size: 35px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* start of medium tablet styles */
+  .welcome-container {
+    height: 90%;
+    width: 90%;
+    border-radius: 2vw;
+  }
+  .welcome-text {
+    font-size: 30px;
+  }
+  .welcome-subtext {
+    font-size: 25px;
+  }
+  .choiceBtn {
+    font-size: 25px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 479px) {
+  /* start of phone styles */
+  .welcome-container {
+    height: 90%;
+    width: 90%;
+    border-radius: 2vw;
+  }
+  .welcome-text {
+    font-size: 25px;
+  }
+  .welcome-subtext {
+    font-size: 20px;
+  }
+  .choiceBtn {
+    font-size: 20px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+}
+
+
+.choiceBtn:link {
   text-decoration: none;
 }
 
-.choice:hover {
+.choiceBtn:hover {
   text-decoration: none;
   color: hotpink;
   border-color: hotpink;
   font-weight: bold;
-
 }

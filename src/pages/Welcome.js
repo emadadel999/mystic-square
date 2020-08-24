@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 const Welcome = (props) => {
   return (
     <div className="welcome-container">
-      <h1>Welcome to Mystic Square</h1>
-      <h2>Choose game type</h2>
+      <p className='welcome-text'>Welcome to Mystic Square</p>
+      <p className="welcome-subtext">Choose game type</p>
       <div className="choice-container">
-        <Link className="choice" type='button' to={`/game/${3}`}>3 x 3</Link>
-        <Link className="choice" type='button' to={`/game/${4}`}>4 x 4</Link>
+        <Link className="choiceBtn" type='button' to={`/game/${3}`}>3 x 3</Link>
+        <Link className="choiceBtn" type='button' to={`/game/${4}`}>4 x 4</Link>
       </div>
     </div>
   );
