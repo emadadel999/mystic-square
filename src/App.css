@@ -1,3 +1,4 @@
+/* main app screen styles */
 .App {
   height: 100vh;
   width: 100%;
@@ -8,49 +9,43 @@
   padding: 20px;
 }
 
+/* footer with credits styles */
 hr.footerLine {
   width: 50vw;
   border-top: 1.5px solid rgb(142, 174, 233);
 }
-
 p.creditsText {
   font-size: 0.75em;
   text-align: center;
   color: #212529;
   margin-bottom: 5px;
 }
-
-a.hyperLink:link {
+a.visitRepoLink:link {
   color: #212529;
   background-color: transparent;
   text-decoration: none;
 }
-a.hyperLink:visited {
+a.visitRepoLink:visited {
   color: #212529;
   background-color: transparent;
   text-decoration: none;
 }
-
-
-a.hyperLink:hover {
+a.visitRepoLink:hover {
   color: rgb(142, 174, 233);
   background-color: transparent;
   text-decoration: none;
 }
-a.hyperLink:active {
+a.visitRepoLink:active {
   color: rgb(142, 174, 233);
   background-color: transparent;
   text-decoration: none;
 }
-
-
 .socialLinks {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
 .socialLinks a {
   margin: 0 10px 0 10px;
 }

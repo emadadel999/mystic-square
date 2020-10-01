@@ -1,21 +1,18 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import Welcome from "./pages/Welcome";
 import Game from "./pages/Game";
-import Result from "./pages/Result";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import "./App.css";
 import GithubIcon from "./components/GithubIcon";
 import LinkedInIcon from "./components/LinkedInIcon";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Helmet
-        bodyAttributes={{
-          style: "background-color : cornflowerblue; min-height: 100%;",
-        }}
+        bodyAttributes={{style: "background-color : cornflowerblue; min-height: 100%;"}}
         htmlAttributes={{ style: "height: 100%;" }}
       />
       <Router>
@@ -26,9 +23,6 @@ function App() {
           <Route exact path="/game/:type">
             <Game />
           </Route>
-          <Route exact path="/result">
-            <Result />
-          </Route>
         </Switch>
       </Router>
       <footer>
@@ -38,7 +32,7 @@ function App() {
           <br />
           it's open source,{" "}
           <a
-            className="hyperLink"
+            className="visitRepoLink"
             href="https://github.com/emadadel999/mystic-square"
             target="_blank"
             rel="noopener noreferrer"

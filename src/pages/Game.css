@@ -1,3 +1,4 @@
+/* playing square styles */
 .game {
   border-style: solid;
   border-color: rgb(171, 189, 223);
@@ -17,7 +18,6 @@
   width: 30vw;
   height: 30vw;
 }
-
 .tile {
   border-style: ridge;
   border-color: rgb(171, 189, 223);
@@ -31,24 +31,20 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5em ;
 }
-
 .zeroTile {
   background-color: rgb(171, 189, 223);
   border-style: none;
   cursor: default;
 }
 
+
+/* controll buttons styles */
 .gameBtns-container {
   width: 30vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.text {
-  color: rgb(142, 174, 233);
-  margin: 0;
-}
-
 #resetBtn {
   width: 45%;
   height: 5vw;
@@ -62,7 +58,6 @@
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
   transition: font-size ease-out 1s;
 }
-
 #resetBtn:link {
   text-decoration: none;
 }
@@ -104,7 +99,6 @@
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
   transition: font-size ease-out 1s;
 }
-
 #backBtn:hover {
   text-decoration: none;
   box-shadow: 0 0 0;
@@ -120,8 +114,8 @@
   background-color: rgb(59, 2, 2);
 }
 
+/* responsive design styles */
 @media (max-width: 991px) {
-  /* start of large tablet styles */
   .game.threebythree {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

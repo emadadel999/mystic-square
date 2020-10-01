@@ -1,3 +1,4 @@
+/* main container */
 .container {
   width: 100%;
   display: flex;
@@ -6,7 +7,7 @@
   flex-direction: column;
 }
 
-
+/* app welcome title text */
 h1.title-text {
   font-size: 1.5em;
   text-align: center;
@@ -14,15 +15,7 @@ h1.title-text {
   text-shadow: 5px 5px rgb(142, 174, 233);
 }
 
-.infoContainer {
-  display: none;
-}
-
-button.toggleInfo{
-  display: none;
-  float: right;
-}
-
+/* app details text styles */
 .details-container {
   height: min-content;
   width: 80vw;
@@ -33,14 +26,6 @@ button.toggleInfo{
   padding: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.detailsText-container {
-  transition: height ease 1s;
-  max-height: 300px;
-  overflow: auto;
-  padding: 10px 20px;
-}
-
 p.details-text {
   font-size: 0.75em;
   text-align: center;
@@ -48,7 +33,17 @@ p.details-text {
   font-family: monospace;
   margin: 0px;
 }
+.details-toggler {
+  display: none;
+}
+.detailsText-container {
+  transition: height ease 1s;
+  max-height: 300px;
+  overflow: auto;
+  padding: 10px 20px;
+}
 
+/* type choosing styles */
 h4.type-text {
   font-size: 0.85em;
   text-align: center;
@@ -57,8 +52,6 @@ h4.type-text {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-
-
 .choice-container {
   width: 50%;
   display: flex;
@@ -66,7 +59,6 @@ h4.type-text {
   justify-content: space-between;
   align-items: center;
 }
-
 .orText {
   margin: 0 10px;
   color: #081d45;
@@ -80,9 +72,6 @@ h4.type-text {
   padding: 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.sampleMainRect3:hover {
-  box-shadow: 0 0 0;
-}
 .sampleMainRect4 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -91,22 +80,25 @@ h4.type-text {
   padding: 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.sampleMainRect4:hover {
-  box-shadow: 0 0 0;
-}
-
-.sampleSmallRect:hover {
-  background-color: #081d45;
-}
-
 .sampleSmallRect {
   width: 3vmin;
   height: 3vmin;
   margin: 0.5vw;
 }
 
+.sampleMainRect3:hover {
+  box-shadow: 0 0 0;
+}
+.sampleMainRect4:hover {
+  box-shadow: 0 0 0;
+}
+.sampleSmallRect:hover {
+  background-color: #081d45;
+}
+
+
+/* responsive design styles */
 @media (max-width: 992px) {
-  /* start of large tablet styles */
   h1.title-text {
     margin-top: 50px;
   }
@@ -123,35 +115,30 @@ h4.type-text {
   p.details-text {
     font-size: 0.75em;
   }
-  
   h4.type-text {
     font-size: 1em;
-    text-align: center;
-    color: #081d45;
-    font-family: monospace;
-    margin-top: 40px;
-    margin-bottom: 20px;
   }
-  .infoContainer {
+  .details-toggler {
     background-color: rgb(117, 157, 230);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .infoText {
+  .toggler-title {
     color: #081d45;
     font-size: 0.8em;
     font-family: monospace;
     text-align: center;
     margin: 0 10px 0 10px;
   }
-  p.toggleInfo{
+  p.toggler-sign{
     color: #081d45;
     font-size: 1em;
     text-align: center;
     margin: 0 10px 0 10px;
   }
+
   .choice-container {
     width: 80%;
   }
@@ -159,7 +146,6 @@ h4.type-text {
     margin: 0 25px;
     color: #081d45;
   }
-
 }
 
 

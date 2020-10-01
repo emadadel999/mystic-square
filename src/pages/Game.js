@@ -54,7 +54,9 @@ const Game = () => {
     const swappedArr = getSwappedArr(num, [...initConfig], gameSize);
     setInitConfig(swappedArr);
     if (JSON.stringify(solutionArray) === JSON.stringify(swappedArr))
-      history.push("/result");
+      // Need to be implemented !
+      // --> notify the user that he has won with a sweet alert
+      history.push("/");
   };
 
   const resetHandler = size => setInitConfig(getRandomUniqueArr(size * size));
@@ -82,7 +84,7 @@ const Game = () => {
           Reset
         </button>
         <Link id="backBtn" type="button" to="/">
-          <p className="text">Back</p>
+          Back
         </Link>
       </div>
     </>
