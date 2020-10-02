@@ -1,3 +1,19 @@
+/* number of moves syles */
+.numMoves {
+  border: dashed;
+
+  border-color: #081d45;
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  width: 30vw;
+}
+.numMoves p {
+  color: #081d45;
+  margin: 0;
+  font-size: 1.5vw;
+  font-family: monospace;
+}
 /* playing square styles */
 .game {
   border-style: solid;
@@ -116,6 +132,12 @@
 
 /* responsive design styles */
 @media (max-width: 991px) {
+  .numMoves {
+    width: 40vw;
+  }
+  .numMoves p {
+    font-size: 2vw;
+  }
   .game.threebythree {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

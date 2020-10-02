@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link, useHistory } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 import Tile from "../components/Tile";
 import "./Game.css";
@@ -10,6 +11,7 @@ const solution_four = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0];
 const solution_three = [1, 2, 3, 4, 5, 6, 7, 8, 0];
 const class_four = "fourbyfour";
 const class_three = "threebythree";
+let moveCounter = 0;
 
 /* Helper Functions */
 const getRandomUniqueArr = (arrSize) => {
@@ -31,6 +33,7 @@ const getSwappedArr = (number, prevConfig, size) => {
   const possibleEndOfRow = swapNumIndex < zeroIndex ? swapNumIndex : zeroIndex;
 
   if (distance === size || (distance === 1 && !isEndOfRow(possibleEndOfRow, size))) {
+    moveCounter++;
     const numToSwap = prevConfig[swapNumIndex];
     prevConfig[zeroIndex] = numToSwap;
     prevConfig[swapNumIndex] = 0;
@@ -54,15 +57,30 @@ const Game = () => {
     const swappedArr = getSwappedArr(num, [...initConfig], gameSize);
     setInitConfig(swappedArr);
     if (JSON.stringify(solutionArray) === JSON.stringify(swappedArr))
-      // Need to be implemented !
-      // --> notify the user that he has won with a sweet alert
-      history.push("/");
+      Swal.fire({
+        title: 'Congratulations',
+        text: 'You solved the puzzle, i wish it was fun.',
+        icon: 'success',
+        confirmButtonText: 'Return Home',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: true
+      }).then((res) => {
+        if (res.value) history.push("/");
+      })
+    
   };
 
-  const resetHandler = size => setInitConfig(getRandomUniqueArr(size * size));
+  const resetHandler = size => {
+    setInitConfig(getRandomUniqueArr(size * size))
+    moveCounter = 0;
+  }
 
   return (
     <>
+      <div className="numMoves">
+        <p>Number of moves: {moveCounter}</p>
+      </div>
       <div className={`game ${classType}`}>
         {initConfig.map((num) => {
           return num === 0 ? (
@@ -83,7 +101,7 @@ const Game = () => {
         <button id="resetBtn" onClick={() => resetHandler(gameSize)}>
           Reset
         </button>
-        <Link id="backBtn" type="button" to="/">
+        <Link id="backBtn" type="button" to="/" onClick={() => {moveCounter = 0}}>
           Back
         </Link>
       </div>

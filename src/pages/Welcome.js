@@ -46,6 +46,7 @@ const Welcome = () => {
         )}
       </div>
       <h4 className="type-text">ꪻꪗρꫀ</h4>
+      {/* transition effect for buttons -- to be implemented */}
       <div className="choice-container">
         <Link type="button" to={`/game/${3}`}>
           <SampleIcon
