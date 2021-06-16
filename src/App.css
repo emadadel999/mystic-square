@@ -1,17 +1,18 @@
 /* main app screen styles */
 .App {
-  height: 100vh;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 20px;
 }
 
 /* footer with credits styles */
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 hr.footerLine {
-  width: 50vw;
+  width: 100%;
   border-top: 1.5px solid rgb(142, 174, 233);
 }
 p.creditsText {
@@ -49,9 +50,3 @@ a.visitRepoLink:active {
 .socialLinks a {
   margin: 0 10px 0 10px;
 }
-
-
-
-
-
-

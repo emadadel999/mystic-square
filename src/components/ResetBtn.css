@@ -1,0 +1,26 @@
+#resetBtn {
+  width: 45%;
+  border-radius: 5px;
+  border-color: transparent;
+  text-align: center;
+  color: rgb(142, 174, 233);
+  background-color: #081d45;
+}
+#resetBtn:link {
+  text-decoration: none;
+}
+#resetBtn:visited {
+  text-decoration: none;
+}
+#resetBtn:hover {
+  text-decoration: none;
+  box-shadow: 0 0 0;
+  border-color: transparent;
+  color: rgb(142, 174, 233);
+  background-color: #05132e;
+}
+
+#resetBtn:focus {
+  outline: none;
+  box-shadow: none;
+}
