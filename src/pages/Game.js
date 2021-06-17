@@ -8,6 +8,7 @@ import ResetBtn from "../components/ResetBtn";
 
 import Tile from "../components/Tile";
 
+/* Styling */
 const GameContainer = styled.div`
   padding-top: 10px;
   display: grid;

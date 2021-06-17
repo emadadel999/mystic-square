@@ -1,5 +1,5 @@
 /* main container */
-.container {
+div.container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@ h1.title-text {
 }
 
 /* app details text styles */
-.details-container {
+div.details-container {
   height: min-content;
   width: 80vw;
   background-color: rgb(142, 174, 233);
@@ -25,22 +25,6 @@ h1.title-text {
   border-color: transparent;
   padding: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-p.details-text {
-  font-size: 0.75em;
-  text-align: center;
-  color: #081d45;
-  font-family: monospace;
-  margin: 0px;
-}
-.details-toggler {
-  display: none;
-}
-.detailsText-container {
-  transition: height ease 1s;
-  max-height: 300px;
-  overflow: auto;
-  padding: 10px 20px;
 }
 
 /* type choosing styles */
@@ -52,50 +36,17 @@ h4.type-text {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-.choice-container {
+div.choice-container {
   width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.orText {
+p.orText {
   margin: 0 10px;
   color: #081d45;
 }
-
-.sampleMainRect3 {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  border-color: transparent;
-  border-radius: 5px;
-  padding: 2px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.sampleMainRect4 {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  border-color: transparent;
-  border-radius: 5px;
-  padding: 2px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.sampleSmallRect {
-  width: 3vmin;
-  height: 3vmin;
-  margin: 0.5vw;
-}
-
-.sampleMainRect3:hover {
-  box-shadow: 0 0 0;
-}
-.sampleMainRect4:hover {
-  box-shadow: 0 0 0;
-}
-.sampleSmallRect:hover {
-  background-color: #081d45;
-}
-
 
 /* responsive design styles */
 @media (max-width: 992px) {
@@ -112,31 +63,8 @@ h4.type-text {
     padding: 5px;
     box-shadow: 0 0 0;
   }
-  p.details-text {
-    font-size: 0.75em;
-  }
   h4.type-text {
     font-size: 1em;
-  }
-  .details-toggler {
-    background-color: rgb(117, 157, 230);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .toggler-title {
-    color: #081d45;
-    font-size: 0.8em;
-    font-family: monospace;
-    text-align: center;
-    margin: 0 10px 0 10px;
-  }
-  p.toggler-sign{
-    color: #081d45;
-    font-size: 1em;
-    text-align: center;
-    margin: 0 10px 0 10px;
   }
 
   .choice-container {
@@ -147,5 +75,3 @@ h4.type-text {
     color: #081d45;
   }
 }
-
-
