@@ -7,12 +7,18 @@ const StyledTile = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-style: ridge;
-  border-color: rgb(171, 189, 223);
-  background-color: rgb(142, 174, 233);
+  border-width: thin;
+  border-style: solid;
+  border-color: black;
+  background-color: #f2f2f2;
   color: #081d45;
   cursor: pointer;
+  font-size: 2vw;
+
   @media (max-width: 991px) {
+    font-size: 5vw;
+  }
+  @media (max-width: 500px) {
     font-size: 10vw;
   }
 `;

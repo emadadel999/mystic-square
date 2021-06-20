@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import StopWatch from "./StopWatch/StopWatch";
 
 const MoveCounterStyled = styled.div`
   width: 100%;
-  border: dashed;
-  border-color: #081d45;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   padding: 10px;
   text-align: center;
   p {
@@ -14,10 +17,26 @@ const MoveCounterStyled = styled.div`
   }
 `;
 
-const MovesCounter = ({ moveCounter }) => {
+const MovesNum = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Timer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const MovesCounter = ({ moveCounter, start }) => {
   return (
-    <MoveCounterStyled className="numMoves">
-      <p>Number of moves: {moveCounter}</p>
+    <MoveCounterStyled>
+      <MovesNum>
+        <p>Moves</p> <p>{moveCounter}</p>
+      </MovesNum>
+      <Timer>
+        <p>Time</p>
+        <StopWatch start={start} />
+      </Timer>
     </MoveCounterStyled>
   );
 };
