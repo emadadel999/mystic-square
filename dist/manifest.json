@@ -1,0 +1,22 @@
+{
+  "short_name": "M-Square",
+  "name": "Mystic Square",
+  "description": "Fun mysterious puzzle game",
+  "icons": [
+    {
+      "src": "icon-192px.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512px.png",
+      "type": "image/jpg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "theme_color": "#000000",
+  "background_color": "#6495ed"
+}

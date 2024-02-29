@@ -1,0 +1,51 @@
+.footer {
+  /* width: 100%; */
+  margin-top: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+};
+.footer::before {
+  content: '';
+  /* width: 100%; */
+  position: absolute;
+  border-top: 1.5px solid rgb(142, 174, 233);
+}
+.credits-text {
+  font-size: 0.75em;
+  text-align: center;
+  color: #060425;
+  margin-bottom: 5px;
+};
+.repo-link {
+}
+.repo-link:link {
+    color: #212529;
+    background-color: transparent;
+    text-decoration: none;
+  }
+.repo-link:visited {
+    color: #212529;
+    background-color: transparent;
+    text-decoration: none;
+  }
+.repo-link:hover {
+    color: rgb(142, 174, 233);
+    background-color: transparent;
+    text-decoration: none;
+  }
+.repo-link:active {
+    color: rgb(142, 174, 233);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links a {
+    margin: 0 10px 0 10px;
+}

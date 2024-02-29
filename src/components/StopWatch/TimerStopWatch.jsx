@@ -13,12 +13,8 @@ const getValidDisplayTime = (hours, minutes, seconds) => {
 };
 const startTimer = (defaultTime, setText) => {
   let countDownDate = new Date(Date.now());
-  countDownDate.setSeconds(
-    countDownDate.getSeconds() + defaultTime.getSeconds() + 1
-  );
-  countDownDate.setMinutes(
-    countDownDate.getMinutes() + defaultTime.getMinutes()
-  );
+  countDownDate.setSeconds(countDownDate.getSeconds() + defaultTime.getSeconds() + 1);
+  countDownDate.setMinutes(countDownDate.getMinutes() + defaultTime.getMinutes());
   countDownDate.setHours(countDownDate.getHours() + defaultTime.getHours());
   const x = setInterval(function () {
     const now = new Date().getTime();
@@ -26,9 +22,7 @@ const startTimer = (defaultTime, setText) => {
     if (distance < 0) {
       clearInterval(x);
     }
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     //hint(seconds);
@@ -49,10 +43,7 @@ const startStopWatch = (fromTime, defaultTime, setText, setIdInterval) => {
     time.setMinutes(defaultTime.getMinutes());
     time.setHours(defaultTime.getHours());
     time.setSeconds(Math.floor(delta / 1000) + defaultTime.getMinutes());
-    console.log(Math.floor(delta / 1000));
-    setText(
-      getValidDisplayTime(time.getHours(), time.getMinutes(), time.getSeconds())
-    );
+    setText(getValidDisplayTime(time.getHours(), time.getMinutes(), time.getSeconds()));
   }, 1000);
   setIdInterval(id);
 };
@@ -66,28 +57,15 @@ const TimerStopWatch = ({ fromTime, isOn, watchType }) => {
     defaultTime = new Date(Date.now());
   }
 
-  const [text, setText] = useState(
-    getValidDisplayTime(
-      defaultTime.getHours(),
-      defaultTime.getMinutes(),
-      defaultTime.getSeconds()
-    )
-  );
+  const [text, setText] = useState(getValidDisplayTime(defaultTime.getHours(), defaultTime.getMinutes(), defaultTime.getSeconds()));
   const [idInterval, setIdInterval] = useState(0);
 
   // as stop watch
   useEffect(() => {
-    if (isOn && watchType === "stopwatch")
-      startStopWatch(fromTime, defaultTime, setText, setIdInterval);
+    if (isOn && watchType === "stopwatch") startStopWatch(fromTime, defaultTime, setText, setIdInterval);
     else if (!isOn) {
       clearInterval(idInterval);
-      setText(
-        getValidDisplayTime(
-          defaultTime.getHours(),
-          defaultTime.getMinutes(),
-          defaultTime.getSeconds()
-        )
-      );
+      setText(getValidDisplayTime(defaultTime.getHours(), defaultTime.getMinutes(), defaultTime.getSeconds()));
     }
     return () => clearInterval(idInterval);
   }, [isOn]);
