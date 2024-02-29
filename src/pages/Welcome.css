@@ -133,6 +133,7 @@
     visibility: visible;
     height: auto;
     padding: 15px;
+    overflow: auto;
   }
   .details-toggler {
     display: flex;

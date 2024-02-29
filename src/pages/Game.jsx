@@ -67,8 +67,7 @@ const Game = () => {
   const swapHandler = (num) => {
     const swappedArr = getSwappedArr(num, [...initConfig], gameSize, setTimer, setCounter, moveCounter, tile);
     setInitConfig(swappedArr);
-    // if (JSON.stringify(solutionArray) === JSON.stringify(swappedArr)) solvedCorrectly(history);
-    if (true) solvedCorrectly(history);
+    if (JSON.stringify(solutionArray) === JSON.stringify(swappedArr)) solvedCorrectly(history);
   };
 
   // resets the moves counter and stop watch

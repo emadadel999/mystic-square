@@ -3,7 +3,7 @@
   margin-top: auto;
   padding-top: 15px;
   padding-bottom: 15px;
-};
+}
 .footer::before {
   content: '';
   /* width: 100%; */
@@ -15,7 +15,7 @@
   text-align: center;
   color: #060425;
   margin-bottom: 5px;
-};
+}
 .repo-link {
 }
 .repo-link:link {
