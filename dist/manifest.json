@@ -15,8 +15,23 @@
     }
   ],
   "start_url": "/",
+  "id": "/",
   "scope": "/",
   "display": "fullscreen",
   "theme_color": "#000000",
-  "background_color": "#6495ed"
+  "background_color": "#6495ed",
+  "screenshots": [
+    {
+      "src": "/narrrow-screenshot2.png",
+      "type": "image/png",
+      "sizes": "385x839",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/wide-screenshot1.png",
+      "type": "image/png",
+      "sizes": "1726x846",
+      "form_factor": "wide"
+    }
+  ]
 }
