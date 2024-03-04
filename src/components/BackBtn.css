@@ -1,0 +1,22 @@
+.back-btn {
+    color: rgb(142, 174, 233);
+    background-color: rgb(110, 4, 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-btn:hover {
+    text-decoration: none;
+    background-color: rgb(59, 2, 2);
+    color: rgb(142, 174, 233);
+  }
+.back-btn    :focus {
+    outline: none;
+    box-shadow: none;
+  }
+.back-btn    :link {
+    text-decoration: none;
+  }
+.back-btn    :visited {
+    text-decoration: none;
+  }

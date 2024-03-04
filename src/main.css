@@ -1,0 +1,72 @@
+html {
+  font-size: calc(112.5% + 0.5vw);
+  font-weight: normal;
+  font-family: monospace;
+}
+.swal2-confirm.swal2-styled {
+  background-color: cornflowerblue;
+}
+button {
+  font-family: monospace;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
+#root {
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+:root {
+  --no-of-tiles: 4;
+  --choice-square-size: 3vmin;
+  --choice-square-margin: 1px;
+  --tile-size: 120px;
+  --game-container-padding: 5px;
+}
+
+@media (max-width: 1024px) and (min-width: 991px) {
+  .app-container,
+  .app-container .game-tile {
+      font-size: 20px;
+      --tile-size: 90px;
+  }
+}
+@media (max-width: 990px) and (min-width: 501px) {
+  .app-container,
+  .app-container .game-tile {
+      font-size: 25px;
+      --tile-size: 90px;
+  }
+}
+@media (max-width: 500px) and (min-width: 401px) {
+  .app-container,
+  .app-container .game-tile {
+      font-size: 20px;
+      --tile-size: 70px;
+  }
+}
+@media (max-width: 400px) and (min-width: 301px) {
+  .app-container,
+  .app-container .game-tile {
+      font-size: 20px;
+      --tile-size: 70px;
+  }
+}
+@media (max-width: 300px) {
+  .app-container,
+  .app-container .game-tile {
+      font-size: 18px;
+      --tile-size: 50px;
+  }
+  .game-btn {
+    height: calc(var(--tile-size) / 1.5);
+  }
+}
