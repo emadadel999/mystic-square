@@ -17,27 +17,27 @@
   margin-bottom: 5px;
 }
 .repo-link {
+  &:link {
+      color: #212529;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  &:visited {
+      color: #212529;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  &:hover {
+      color: rgb(142, 174, 233);
+      background-color: transparent;
+      text-decoration: none;
+    }
+  &:active {
+      color: rgb(142, 174, 233);
+      background-color: transparent;
+      text-decoration: none;
+    }
 }
-.repo-link:link {
-    color: #212529;
-    background-color: transparent;
-    text-decoration: none;
-  }
-.repo-link:visited {
-    color: #212529;
-    background-color: transparent;
-    text-decoration: none;
-  }
-.repo-link:hover {
-    color: rgb(142, 174, 233);
-    background-color: transparent;
-    text-decoration: none;
-  }
-.repo-link:active {
-    color: rgb(142, 174, 233);
-    background-color: transparent;
-    text-decoration: none;
-  }
 
 .social-links {
   display: flex;

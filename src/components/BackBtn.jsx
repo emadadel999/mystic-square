@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./BackBtn.css";
+import "./BackBtn.scss";
 
 const BackBtn = ({ resetMoveCounter, children }) => {
   return (

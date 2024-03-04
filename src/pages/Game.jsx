@@ -5,7 +5,7 @@ import BackBtn from "../components/BackBtn";
 import ResetBtn from "../components/ResetBtn";
 
 import StopWatch from "../components/StopWatch/StopWatch";
-import "./Game.css";
+import "./Game.scss";
 
 /* Global Variables */
 const solution_four = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0];
@@ -89,17 +89,25 @@ const Game = () => {
         </div>
       </div>
       <div className='game-container'>
-        <div className={`game --${gameSize}`}>
-          {initConfig.map((num, index) =>
-            num !== 0 ? (
-              <div ref={tile} key={index} className='game-tile' disabled={false} onClick={() => swapHandler(num)} gameSize={gameSize}>
-                {num}
-              </div>
-            ) : (
-              <div key={index}></div>
-            )
-          )}
+        <div className='face front'>
+          {/* <div className='--face-inner'></div> */}
+          <div className={`game --${gameSize}`}>
+            {initConfig.map((num, index) =>
+              num !== 0 ? (
+                <div ref={tile} key={index} className='game-tile' disabled={false} onClick={() => swapHandler(num)} gameSize={gameSize}>
+                  {num}
+                </div>
+              ) : (
+                <div key={index}></div>
+              )
+            )}
+          </div>
         </div>
+        <div className='face back'></div>
+        <div className='face right'></div>
+        <div className='face left'></div>
+        <div className='face top'></div>
+        <div className='face bottom'></div>
       </div>
       <div className='game-btns-container'>
         <ResetBtn onPress={() => resetHandler(gameSize)}>Reset</ResetBtn>

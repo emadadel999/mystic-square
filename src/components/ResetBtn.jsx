@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "./ResetBtn.css";
+import "./ResetBtn.scss";
 
 const ResetBtn = ({ onPress, children }) => {
   return (

@@ -1,0 +1,23 @@
+.reset-btn {
+    cursor: pointer;
+    color: rgb(142, 174, 233);
+    background-color: #081d45;
+    &:active {
+        text-decoration: none;
+    }
+    &:link {
+        text-decoration: none;
+    }
+    &:visited {
+        text-decoration: none;
+    }
+    &:hover {
+        text-decoration: none;
+        color: rgb(142, 174, 233);
+        background-color: #05132e;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}

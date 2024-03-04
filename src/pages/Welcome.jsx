@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import useWindowDimensions from "../hooks/useWindowDimensions";
-import "./Welcome.css";
+import "./Welcome.scss";
 import ChevronDown from "../components/Icons/ChevronDown";
 import { Link } from "react-router-dom";
 import ChoiceIcon from "../components/Icons/ChoiceIcon";
