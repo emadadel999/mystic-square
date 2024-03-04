@@ -27,7 +27,7 @@ body {
 :root {
   --no-of-tiles: 4;
   --choice-square-size: 3vmin;
-  --choice-square-margin: 0.5vw;
+  --choice-square-margin: 1px;
   --tile-size: 120px;
   --game-container-padding: 5px;
 }
