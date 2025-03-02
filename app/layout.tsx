@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import Footer from '../src/components/footer';
 import React from 'react';
 import "@/src/styles/main.scss";
+import Footer from '@/src/components/footer';
 
 export const metadata: Metadata = {
   title: 'Mystic Square',
