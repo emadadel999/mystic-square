@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
-import ChevronDown from "../src/components/icons/chevron-down";
+import ChevronDown from "@/src/components/icons/chevron-down";
 
 export default function Desc() {
   const [isActive, setIsActive] = useState(false);

@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import StopWatch from "../../src/components/stop-watch";
-import ExitIcon from "../../src/components/icons/exit";
-import ResetIcon from "../../src/components/icons/reset";
+import StopWatch from "@/src/components/stop-watch";
+import ExitIcon from "@/src/components/icons/exit";
+import ResetIcon from "@/src/components/icons/reset";
 
 export default function Game({ type: gameType }: { type: number }) {
   const initSquares = getRandomSquares(gameType * gameType);
