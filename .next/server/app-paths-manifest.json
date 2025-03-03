@@ -1,6 +1,6 @@
 {
   "/manifest.json/route": "app/manifest.json/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/game/[type]/page": "app/game/[type]/page.js"
+  "/game/[type]/page": "app/game/[type]/page.js",
+  "/page": "app/page.js"
 }

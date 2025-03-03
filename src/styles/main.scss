@@ -4,7 +4,6 @@
 @use 'mixins' as *;
 @forward 'game';
 @forward 'mixins';
-@forward 'footer';
 
 
 
@@ -26,13 +25,30 @@ html {
   --choice-square-margin: 1px;
   --choice-margin: 50px;
 
+  --game-spacing: 10px;
+  --game-container-padding: 2px;
+  --game-tile-fs: 25px;
+  --tile-size: 80px;
+  --game-btn-icon-size: 25px;
+  --gap: 30px;
+  --gap-factor: 2;
+
   @include thinner-than(550px) {
+    --game-spacing: 5px;
+    --game-tile-fs: 25px;
+    --tile-size: 80px;
+    --gap: 20px;
     --choice-margin: 30px;
   }
   @include thinner-than(450px) {
+    --game-tile-fs: 22px;
+    --tile-size: 70px;
+    --game-btn-icon-size: 20px;
     --choice-margin: 20px;
   }
   @include thinner-than(365px) {
+    --game-tile-fs: 20px;
+    --tile-size: 60px;
     --choice-square-size: 18px;
     --choice-margin: 10px;
   }
@@ -40,9 +56,18 @@ html {
     --choice-square-size: 15px;
     --choice-margin: 5px;
   }
-  @include thinner-than(280px) {
+  @include thinner-than(290px) {
+    --game-tile-fs: 15px;
+    --tile-size: 50px;
     --choice-square-size: 15px;
     --choice-margin: 5px;
+  }
+
+  @include taller-than(1000px) {
+    --gap-factor: 4;
+  }
+  @include shorter-than(600px) {
+    --gap-factor: 1;
   }
 }
 
@@ -74,9 +99,30 @@ button {
 .app-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   padding: 8px;
   height: calc(100vh - 16px);
+  &:has(.expanded) {
+    height: auto;
+  }
+  &:has(.game-view-container) .social-link {
+    @include shorter-than(535px) {
+      display: none;
+    }
+  }
+  &:has(.choice-container) .social-link {
+    @include shorter-than(500px) {
+      display: none;
+    }
+    @include thinner-than(510px) {
+      display: none;
+    }
+  }
+  @include shorter-than(540px) {
+    padding: var(--gap) 0;
+    height: auto;
+  }
 }
 .app-container:has(.--3),
 .app-container .choice-squares-container.--3 {
@@ -96,6 +142,7 @@ button {
   text-align: center;
   color: var(--font-color2);
   text-shadow: 5px 5px var(--bg-color2);
+  margin-top: var(--gap);
 }
 
 /* app details text styles */
@@ -108,6 +155,10 @@ button {
   border-color: transparent;
   padding: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  @include thinner-than(992px) {
+    padding: 5px;
+    box-shadow: 0 0 0;
+  }
 }
 
 .details-text {
@@ -117,6 +168,17 @@ button {
   max-height: 300px;
   height: max-content;
   overflow: hidden;
+  @include thinner-than(992px) {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+    &.active {
+      visibility: visible;
+      height: auto;
+      padding: 15px;
+      overflow: auto;
+    }
+  }
 }
 
 .details-toggler {
@@ -129,6 +191,9 @@ button {
   align-items: center;
   padding: 10px;
   cursor: pointer;
+  @include thinner-than(992px) {
+    display: flex;
+  }
 }
 .details-toggler-title {
   color: var(--font-color2);
@@ -226,59 +291,6 @@ button {
 
 
 
-/* responsive design styles */
-@media (max-width: 992px) {
-  .title-text {
-    margin-top: 50px;
-  }
-  .details-container {
-    padding: 5px;
-    box-shadow: 0 0 0;
-  }
-  .details-text {
-    visibility: hidden;
-    height: 0;
-    padding: 0;
-  }
-  .details-text.active {
-    visibility: visible;
-    height: auto;
-    padding: 15px;
-    overflow: auto;
-  }
-  .details-toggler {
-    display: flex;
-  }
-  .type-text {
-    font-size: 1em;
-  }
-  .orText {
-    width: 35px;
-  }
-}
-
-@media (max-width: 500px) {
-  .orText {
-    width: 20px;
-  }
-}
-
-@media (max-height: 600px) {
-  html, .app-container {
-    overflow: scroll;
-    display: block;
-  }
-  .game-view-container {
-    margin: auto;
-  }
-  .choice-container {
-    justify-content: center;
-  }
-  .details-container {
-    margin: auto;
-  }
-}
-
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -287,4 +299,17 @@ button {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+.footer, footer {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+}
+
+.social-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-size: 0;
 }
