@@ -1,35 +1,45 @@
 {
   "short_name": "M-Square",
   "name": "Mystic Square",
-  "description": "Fun mysterious puzzle game",
+  "id": "/",
   "icons": [
     {
-      "src": "/icon-192px.png",
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "sizes": "192x192"
+      "purpose": "maskable"
     },
     {
-      "src": "/icon-512px.png",
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "start_url": "/",
+  "theme_color": "#64b0ef",
+  "background_color": "#060425",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#6495ed",
+  "start_url": "/",
   "screenshots": [
     {
-      "src": "/narrrow-screenshot2.png",
-      "type": "image/png",
-      "sizes": "385x839",
-      "form_factor": "narrow"
+      "src": "screenshots/home.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Home screen showing main navigation and featured content"
     },
     {
-      "src": "/wide-screenshot1.png",
-      "type": "image/png",
-      "sizes": "1726x846",
-      "form_factor": "wide"
+      "src": "screenshots/game.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "platform": "ios",
+      "label": "A view of the game screen"
     }
   ]
 }

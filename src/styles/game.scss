@@ -5,13 +5,12 @@
   --game-container-padding: 2px;
   --game-tile-fs: 25px;
   --tile-size: 80px;
-  --game-btn-icon-size: 30px;
+  --game-btn-icon-size: 25px;
   --gap: 30px;
   @include thinner-than(550px) {
     --game-spacing: 5px;
     --game-tile-fs: 25px;
     --tile-size: 80px;
-    --game-btn-icon-size: 25px;
   }
   @include thinner-than(450px) {
     --game-tile-fs: 22px;
@@ -122,9 +121,9 @@
   align-items: center;
   border-width: 0.5px;
   border-style: solid;
-  border-color: black;
+  border-color: var(--font-color2);
   background-color: #f2f2f2;
-  color: #081d45;
+  color: var(--font-color2);
   cursor: pointer;
   font-size: var(--game-tile-fs);
   margin: calc(0.5 * var(--game-container-padding));
@@ -147,10 +146,10 @@
 .moves-num,
 .timer {
   width: calc(var(--tile-size) * ((var(--no-of-tiles) / 2) - 0.1));
-  background-color: rgb(114, 159, 241);
+  background-color: var(--bg-color3);
   padding: var(--game-spacing);
   border-radius: 10px;
-  color: #183875;
+  color: var(--font-color1);
 
   p {
     margin: 0;
@@ -158,8 +157,8 @@
     font-weight: bold;
   }
   time, data {
-    color: #081d45;
-    background-color: rgb(134, 178, 255);
+    color: var(--font-color2);
+    background-color: var(--bg-color4);
     display: block;
     border-radius: 10px;
     padding: 3px 10px;
@@ -187,6 +186,9 @@
   text-decoration: none;
   font-size: 18px;
   padding: calc(0.4 * var(--game-spacing));
+  display: flex;
+  justify-content: center;
+  align-items: center;
   *, svg {
     width: var(--game-btn-icon-size);
     height: var(--game-btn-icon-size);
@@ -194,49 +196,41 @@
 }
 
 .back-btn {
-  color: rgb(142, 174, 233);
+  color: var(--bg-color);
   background-color: rgb(110, 4, 4);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: var(--game-spacing);
+  &:active, &:link, &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    background-color: rgb(74, 25, 25);
+  }
 }
-.back-btn:hover {
-  text-decoration: none;
-  background-color: rgb(59, 2, 2);
-  color: rgb(142, 174, 233);
-}
-.back-btn :focus {
-  outline: none;
-  box-shadow: none;
-}
-.back-btn :link {
-  text-decoration: none;
-}
-.back-btn :visited {
-  text-decoration: none;
-}
+
 
 .reset-btn {
   cursor: pointer;
-  color: rgb(142, 174, 233);
-  background-color: #081d45;
+  color: var(--bg-color);
+  background-color: #003771;
+  &:active, &:link, &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    background-color: #00448e;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
-.reset-btn:active {
-  text-decoration: none;
-}
-.reset-btn:link {
-  text-decoration: none;
-}
-.reset-btn:visited {
-  text-decoration: none;
-}
-.reset-btn:hover {
-  text-decoration: none;
-  color: rgb(142, 174, 233);
-  background-color: #05132e;
-}
-.reset-btn:focus {
-  outline: none;
-  box-shadow: none;
+
+
+
+.swal2-confirm.swal2-styled {
+  background-color: var(--bg-color);
 }

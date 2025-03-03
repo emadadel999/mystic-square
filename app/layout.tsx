@@ -14,24 +14,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="M-Square" />
+      </head>
       <body>
         <main className="app-container">
           {children}
           <footer className="footer">
-            <div className="social-links">
               <a
+                className="social-link"
                 href="https://eabdelmaksoud.me"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 <img
                   className="noselect"
                   src="/pp1.png"
-                  height={32}
-                  width={32}
+                  height={40}
+                  width={34}
                 />
               </a>
-            </div>
           </footer>
         </main>
       </body>
